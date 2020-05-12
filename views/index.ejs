@@ -1,0 +1,119 @@
+<html class="layout-pf layout-pf-fixed">
+
+<link rel="stylesheet" href="scripts/patternfly/dist/css/patternfly.min.css">
+<link rel="stylesheet" href="scripts/patternfly/dist/css/patternfly.css">
+<link rel="stylesheet" href="scripts/patternfly/dist/css/patternfly-additions.min.css">
+
+<!-- JS -->
+<script src="scripts/jquery/dist/jquery.min.js"></script>
+<script src="scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/patternfly/dist/js/patternfly.min.js"></script>
+<script src="scripts/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js"></script>
+
+<!-- C3, D3 - Charting Libraries -->
+<script src="scripts/d3/dist/d3.min.js"></script>
+<script src="scripts/c3/c3.min.js"></script>
+
+<script src="scripts/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script>
+  axios.get('http://localhost:3000/api/vms')
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+</script>
+
+<% include ../views/navbar.ejs %>
+<% include ../views/vertical_menu.ejs %>
+<% include ../views/about.ejs %>
+<% include ../views/modal.ejs %>
+<% include ../views/catalog.ejs %>
+
+
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical hide-nav-pf">
+  <div class="row row-cards-pf">
+    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="pf pficon-cluster"></span> <span class="card-pf-aggregate-status-count">JBoss EAP</span></h2>
+        <div class="card-pf-body">
+        <p class="card-pf-body" align="left" >  JBoss® Enterprise Application Platform 7 provides an innovative modular, cloud-ready architecture, powerful management and automation, and world class developer productivity. It is Java™ EE 8 certified and features powerful, enterprise-grade features such as high availability clustering, distributed caching, messaging, transactions, and a full web services stack. It offers full support and deployment flexibility for Java EE in any environment, whether on-premise, virtual, or hybrid cloud environments. </p>
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a class="add" data-toggle="modal"
+                data-placement="top" title="Add Ipsum" data-target="#addModal"><span class="pficon pficon-add-circle-o"></span></a></span>
+          </p>
+        </div>
+      </div>
+      </div>
+
+     <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="pf pficon-cluster"></span> <span class="card-pf-aggregate-status-count">Tomcat</span></h2>
+        <div class="card-pf-body">
+        <p class="card-pf-body"> The Apache Tomcat® software is an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. The Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket specifications are developed under the Java Community Process.
+
+The Apache Tomcat software is developed in an open and participatory environment and released under the Apache License version 2. The Apache Tomcat project is intended to be a collaboration of the best-of-breed developers from around the world. We invite you to participate in this open development project. To learn more about getting involved, click here.
+
+        </p>
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a class="add" data-toggle="modal"
+                data-placement="top" title="Add Ipsum" data-target="#addModal"><span class="pficon pficon-add-circle-o"></span></a></span>
+          </p>
+        </div>
+      </div>
+      </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="pf pficon-cluster"></span> <span class="card-pf-aggregate-status-count">Nginx</span></h2>
+        <div class="card-pf-body">
+        <p class="card-pf-body"> NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.
+        </p>
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a class="add" data-toggle="modal"
+                data-placement="top" title="Add Ipsum" data-target="#addModal"><span class="pficon pficon-add-circle-o"></span></a></span>
+          </p>
+        </div>
+      </div>
+      </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="pf pficon-cluster"></span> <span class="card-pf-aggregate-status-count">Apache</span></h2>
+        <div class="card-pf-body">
+        <p class="card-pf-body">
+Apache is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, WordPress can run on other web server software as well.
+        </p>
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a class="add" data-toggle="modal"
+                data-placement="top" title="Add Ipsum" data-target="#addModal"><span class="pficon pficon-add-circle-o"></span></a></span>
+          </p>
+        </div>
+      </div>
+      </div>
+
+  </div>
+  </div><!-- /row -->
+
+
+
+
+<script>
+  $(document).ready(function () {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+
+    // Initialize the vertical navigation
+    $().setupVerticalNavigation(true);
+  });
+</script>
+
+</html>
